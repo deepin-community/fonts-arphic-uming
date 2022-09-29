@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_installdocs:
+	dh_installdocs
+	find debian/fonts-arphic-uming -name .svn -print0 | xargs --null rm --recursive --force
+
+override_dh_installchangelogs:
+	dh_installchangelogs -p fonts-arphic-uming FONTLOG
+
+override_dh_missing:
+	dh_missing --fail-missing

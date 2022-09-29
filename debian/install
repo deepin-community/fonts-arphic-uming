@@ -1,0 +1,2 @@
+*.conf etc/fonts/conf.avail
+*.ttc usr/share/fonts/truetype/arphic
